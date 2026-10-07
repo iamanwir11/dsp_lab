@@ -1,0 +1,50 @@
+n = [-2, -1, 0, 1]; 
+x = [1, -2, 3, 6];
+
+// 1. y1(n) = x(-n)
+n1 = -n($:-1:1);
+y1 = x($:-1:1);
+
+// 2. y2(n) = x(n + 3)
+n2 = n - 3;
+y2 = x;
+
+// 3. y3(n) = 2x(-n - 2)
+n3 = -n($:-1:1) - 2;
+y3 = 2 * x($:-1:1);
+
+// Cửa sổ 1: x(n) và y1(n)
+scf(1); 
+subplot(2, 1, 1);
+plot2d3(n, x);
+title('Original Signal x(n)');
+xlabel('n'); ylabel('Amplitude');
+
+subplot(2, 1, 2);
+plot2d3(n1, y1);
+title('y1(n) = x(-n)');
+xlabel('n'); ylabel('Amplitude');
+
+// Cửa sổ 2: x(n) và y2(n)
+scf(2); 
+subplot(2, 1, 1);
+plot2d3(n, x);
+title('Original Signal x(n)');
+xlabel('n'); ylabel('Amplitude');
+
+subplot(2, 1, 2);
+plot2d3(n2, y2);
+title('y2(n) = x(n + 3)');
+xlabel('n'); ylabel('Amplitude');
+
+// Cửa sổ 3: x(n) và y3(n)
+scf(3); 
+subplot(2, 1, 1);
+plot2d3(n, x);
+title('Original Signal x(n)');
+xlabel('n'); ylabel('Amplitude');
+
+subplot(2, 1, 2);
+plot2d3(n3, y3);
+title('y3(n) = 2x(-n - 2)');
+xlabel('n'); ylabel('Amplitude');
